@@ -44,6 +44,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -112,6 +113,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -143,11 +146,21 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Modeles\Init.cpp" />
+    <ClCompile Include="Modeles\Library.cpp" />
+    <ClCompile Include="Modeles\SDK\ILuaInterface.cpp" />
+    <ClCompile Include="Modeles\SDK\ILuaShared.cpp" />
+    <ClCompile Include="Modeles\SDK\IVEngineClient.cpp" />
+    <ClCompile Include="Modeles\SDK\NetChannel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Init.h" />
+    <ClInclude Include="Headers\Interface.h" />
+    <ClInclude Include="Headers\LuaBase.h" />
     <ClInclude Include="Headers\main_header.h" />
     <ClInclude Include="Headers\OS.h" />
+    <ClInclude Include="Headers\SourceCompat.h" />
+    <ClInclude Include="Headers\Types.h" />
+    <ClInclude Include="Headers\UserData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

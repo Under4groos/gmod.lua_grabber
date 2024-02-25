@@ -3,9 +3,11 @@
 
 #include <shlobj_core.h>
 #include <iostream>
- 
+#include "Library.cpp"
+#include "SDK/IVEngineClient.cpp"
+using namespace std;
 
-
+Library Lib;
  
  
 void BASE::Init(int hModule) {
@@ -22,8 +24,19 @@ void BASE::Init(int hModule) {
 	}
 	
 
+	auto* addres = Lib.GetModule("engine");
+	IVEngineClient* g_engineclient = Lib.GetInterface<IVEngineClient>("VEngineClient015");
+	cout << "IVEngineClient: " << g_engineclient << endl;
+	cout << addres << endl;
+
+
+
+
+
+	//Lib.GetModule("lua_shared");
+
 	std::cout << "Debug mode" << std::endl;
-	Sleep(5000);
+	 
 	
 
 	if (hModule) {

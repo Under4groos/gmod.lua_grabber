@@ -13,10 +13,30 @@
     <ClCompile Include="Modeles\Init.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Modeles\Library.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Modeles\SDK\IVEngineClient.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Modeles\SDK\NetChannel.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Modeles\SDK\ILuaShared.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Modeles\SDK\ILuaInterface.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\main_header.h" />
     <ClInclude Include="Headers\OS.h" />
     <ClInclude Include="Headers\Init.h" />
+    <ClInclude Include="Headers\Interface.h" />
+    <ClInclude Include="Headers\LuaBase.h" />
+    <ClInclude Include="Headers\SourceCompat.h" />
+    <ClInclude Include="Headers\UserData.h" />
+    <ClInclude Include="Headers\Types.h" />
   </ItemGroup>
 </Project>
