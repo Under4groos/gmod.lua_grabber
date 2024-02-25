@@ -2,5 +2,6 @@
 
 
 namespace BASE {
-	void Init();
+	void Init(int hModule);
+	
 }
